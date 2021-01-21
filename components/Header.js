@@ -25,27 +25,27 @@ export default Header;
 const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: "row",
-    paddingVertical: 20,
-    paddingHorizontal: 10,
+    padding: 10,
+    alignSelf: "flex-end",
+    justifyContent: 'flex-start'
   },
   container: {
     backgroundColor: colors.primary,
     flexDirection: "row",
     width: "100%",
-    height: Constants.statusBarHeight + 100,
+    height: Constants.statusBarHeight + 110,
   },
   content: {
     flexDirection: "row",
-    flexGrow: 100,
-    //alignItems: "center",
     width: "100%",
-    justifyContent: 'flex-end',
+    justifyContent: "space-between",
   },
   title: {
     color: colors.white,
     fontSize: 36,
     padding: 10,
-    paddingRight: 60,
+    paddingLeft: 14,
     alignSelf: "flex-end",
+    justifyContent: "center"
   },
 });
