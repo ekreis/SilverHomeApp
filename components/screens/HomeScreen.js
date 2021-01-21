@@ -7,9 +7,9 @@ import Screen from "../Screen";
 
 function HomeScreen(props) {
   return (
-    <Screen>
+    <View style={styles.container}>
       <Header title="Home" />
-    </Screen>
+    </View>
   );
 }
 
@@ -17,7 +17,7 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.background,
     flex: 1,
   },
 });
