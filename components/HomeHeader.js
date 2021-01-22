@@ -6,12 +6,13 @@ import colors from "./config/colors";
 import AppText from "./AppText";
 import HeaderButton from "./HeaderButton";
 
-function Header({ title, icon }) {
+function HomeHeader({ title, icon }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
         <AppText style={styles.title}>{title}</AppText>
         <View style={styles.buttonsContainer}>
+          <HeaderButton title="Settings" color="secondary" icon="settings" />
           <HeaderButton title="Tutorial" color="secondary" icon="play" />
         </View>
       </View>
@@ -19,7 +20,7 @@ function Header({ title, icon }) {
   );
 }
 
-export default Header;
+export default HomeHeader;
 
 const styles = StyleSheet.create({
   buttonsContainer: {
