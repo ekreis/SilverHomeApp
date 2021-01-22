@@ -1,11 +1,11 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import colors from "../config/colors";
 
-import Header from "../HomeHeader";
+import colors from "../config/colors";
+import Header from "../Header";
 import Screen from "../Screen";
 
-function HomeScreen(props) {
+function UserInfoScreen(props) {
   return (
     <View style={styles.container}>
       <Header title="User Info" />
@@ -13,7 +13,7 @@ function HomeScreen(props) {
   );
 }
 
-export default HomeScreen;
+export default UserInfoScreen;
 
 const styles = StyleSheet.create({
   container: {

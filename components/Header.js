@@ -13,7 +13,6 @@ function Header({ title, icon }) {
         <AppText style={styles.title}>{title}</AppText>
         <View style={styles.buttonsContainer}>
           <HeaderButton title="Tutorial" color="secondary" icon="play" />
-          <HeaderButton title="Settings" color="secondary" icon="settings" />
         </View>
       </View>
     </View>
