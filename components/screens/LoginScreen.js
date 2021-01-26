@@ -1,4 +1,6 @@
 import React from 'react';
+import colors from "../config/colors";
+import syles from "../config/styles";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 export default class App extends React.Component {
@@ -13,19 +15,19 @@ export default class App extends React.Component {
         <View style={styles.inputView} >
           <TextInput  
             style={styles.inputText}
-            placeholder="Email..." 
+            placeholder="Type your email here..." 
             placeholderTextColor="#003f5c"
             onChangeText={text => this.setState({email:text})}/>
         </View>
         <View style={styles.inputView} >
           <TextInput  
-            secureTextEntry
+            secureTextEntry //this makes it so the characters are not shown in the password
             style={styles.inputText}
-            placeholder="Password..." 
+            placeholder="Type your password here..." 
             placeholderTextColor="#003f5c"
             onChangeText={text => this.setState({password:text})}/>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.forgotBtn}>
           <Text style={styles.forgot}>Forgot Password?</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.loginBtn}>
@@ -44,19 +46,20 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#003f5c',
+    width: '100%',
+    backgroundColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
   },
   logo:{
-    fontWeight:"bold",
+    fontWeight:"normal",
     fontSize:50,
-    color:"#fb5b5a",
-    marginBottom:40
+    color:"white",
+    marginBottom:80
   },
   inputView:{
     width:"80%",
-    backgroundColor:"#465881",
+    backgroundColor: colors.medium,
     borderRadius:25,
     height:50,
     marginBottom:20,
@@ -64,16 +67,30 @@ const styles = StyleSheet.create({
     padding:20
   },
   inputText:{
-    height:50,
+    fontWeight: "bold",
+    height:60,
     color:"white"
   },
   forgot:{
     color:"white",
-    fontSize:11
+    fontSize:15
   },
+
+  forgotBtn:{
+    width:"60%",
+    backgroundColor:"grey",
+    borderRadius:25,
+    height:50,
+    alignItems:"center",
+    justifyContent:"center",
+    marginTop:30,
+    marginBottom:10
+  },
+
+  
   loginBtn:{
     width:"80%",
-    backgroundColor:"#fb5b5a",
+    backgroundColor: colors.accent,
     borderRadius:25,
     height:50,
     alignItems:"center",
@@ -81,6 +98,7 @@ const styles = StyleSheet.create({
     marginTop:40,
     marginBottom:10
   },
+  
   loginText:{
     color:"white"
   }
