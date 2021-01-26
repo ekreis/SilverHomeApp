@@ -1,16 +1,17 @@
 import React from 'react';
 import colors from "../config/colors";
 import syles from "../config/styles";
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default class App extends React.Component {
-  state={
+  state={       //this is for the future, when we actually want to log someone in
     email:"",
     password:""
   }
   render(){
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
+        <Image style={styles.image} source={require('../assets/logo.png')}/>
         <Text style={styles.logo}>SilverHome</Text>
         <View style={styles.inputView} >
           <TextInput  
@@ -38,7 +39,7 @@ export default class App extends React.Component {
         </TouchableOpacity>
 
   
-      </View>
+      </SafeAreaView>
     );
   }
 }
@@ -57,7 +58,13 @@ const styles = StyleSheet.create({
     color:"white",
     marginBottom:80
   },
-  inputView:{
+  image:{
+    justifyContent: 'center',
+    width: 100,
+    height: 100,
+    marginBottom: 15
+  },
+  inputView:{ 
     width:"80%",
     backgroundColor: colors.medium,
     borderRadius:25,
@@ -72,8 +79,9 @@ const styles = StyleSheet.create({
     color:"white"
   },
   forgot:{
+    fontWeight: 'bold',
     color:"white",
-    fontSize:15
+    fontSize:18
   },
 
   forgotBtn:{
@@ -100,6 +108,8 @@ const styles = StyleSheet.create({
   },
   
   loginText:{
-    color:"white"
+    color:"white",
+    fontWeight: 'bold',
+    fontSize:18
   }
 });
