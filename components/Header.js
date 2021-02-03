@@ -12,6 +12,7 @@ function Header({ title, icon }) {
       <View style={styles.content}>
         <AppText style={styles.title}>{title}</AppText>
         <View style={styles.buttonsContainer}>
+          <HeaderButton title="HOME" color="secondary" icon="home" />
           <HeaderButton title="Tutorial" color="secondary" icon="play" />
         </View>
       </View>
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 10,
     alignSelf: "flex-end",
-    justifyContent: 'flex-start'
+    justifyContent: "flex-start",
   },
   container: {
     backgroundColor: colors.primary,
@@ -45,6 +46,6 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingLeft: 14,
     alignSelf: "flex-end",
-    justifyContent: "center"
+    justifyContent: "center",
   },
 });
