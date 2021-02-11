@@ -13,8 +13,8 @@ function HomeScreen(props) {
       <HomeHeader title="Home" />
       <View style={styles.buttonContainer}>
         <ServiceButton title="Overview" icon="book" />
-        <ServiceButton title="User Info" icon='user'/>
-        <ServiceButton title="Add Services" icon='plus'/>
+        <ServiceButton title="User Info" icon="user" />
+        <ServiceButton title="Add Services" icon="plus" />
         {/* <ServiceButton />
         <ServiceButton />
         <ServiceButton /> */}
