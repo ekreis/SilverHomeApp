@@ -11,6 +11,7 @@ function HomeScreen(props) {
   return (
     <View style={styles.container}>
       <HomeHeader title="Home" />
+
       <View style={styles.buttonContainer}>
         <ServiceButton title="Overview" icon="book" />
         <ServiceButton title="User Info" icon="user" />
