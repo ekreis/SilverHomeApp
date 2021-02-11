@@ -1,15 +1,29 @@
 import React from 'react';
 import colors from "../config/colors";
 import syles from "../config/styles";
-import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity, Image } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack'
+import { NavigationContainer } from '@react-navigation/native'
+import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity, Image, Button } from 'react-native';
+import HomeScreen from './HomeScreen';
+
+
+//const Stack = createStackNavigator();
+
 
 export default class App extends React.Component {
   state={       //this is for the future, when we actually want to log someone in
     email:"",
     password:""
   }
+  //handleOnPress = () => {alert="you forgot lmao"}
+  /*constructor(){
+  super();
+  this.onPressButton = this.onPressButton.bind(this);
+  }*/
   render(){
+    
     return (
+      
       <SafeAreaView style={styles.container}>
         <Image style={styles.image} source={require('../assets/logo.png')}/>
         <Text style={styles.logo}>SilverHome</Text>
@@ -28,11 +42,16 @@ export default class App extends React.Component {
             placeholderTextColor="#003f5c"
             onChangeText={text => this.setState({password:text})}/>
         </View>
-        <TouchableOpacity style={styles.forgotBtn}>
+        
+        <TouchableOpacity 
+          onPress={() => this.onPressButton} 
+          style={styles.forgotBtn}
+          >
           <Text style={styles.forgot}>Forgot Password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.loginBtn}>
+        <TouchableOpacity style={styles.loginBtn} title = 'TouchableOpacity'>
           <Text style={styles.loginText}>LOGIN</Text>
+          
         </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.loginText}>Signup</Text>
@@ -40,9 +59,22 @@ export default class App extends React.Component {
 
   
       </SafeAreaView>
+    
     );
+    
   }
-}
+/*
+  onPressButton() {
+    const { navigate } = this.props.navigation;
+    var options = {
+      title: strings.app_name,
+      content: strings.create_message,
+      positiveText: strings.OK,
+      onPositive: () => console.log("this works")};
+  } */
+} 
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -75,8 +107,8 @@ const styles = StyleSheet.create({
   },
   inputText:{
     fontWeight: "bold",
-    height:60,
-    color:"white"
+    height:80,
+    color:"black"
   },
   forgot:{
     fontWeight: 'bold',
