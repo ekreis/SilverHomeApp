@@ -6,6 +6,7 @@ import colors from "../config/colors";
 import Header from "../Header";
 import Screen from "../Screen";
 import ReportButton from "../ReportButton";
+import InfoCategory from "../InfoCategory";
 
 function UserInfoScreen(props) {
   return (
@@ -20,6 +21,12 @@ function UserInfoScreen(props) {
           </AppText>
         </View>
         <ReportButton title="Generate a Report" style={styles.reportButton} />
+        <InfoCategory
+          title="Health Insurance"
+          provider="Aetna"
+          copay="$20"
+          grp="54354658465"
+        ></InfoCategory>
       </View>
     </View>
   );
